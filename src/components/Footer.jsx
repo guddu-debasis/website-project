@@ -71,7 +71,7 @@ const Footer = () => {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/debasis-panda"
+              href="https://www.linkedin.com/in/debasis-panda-07b2912a5/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
