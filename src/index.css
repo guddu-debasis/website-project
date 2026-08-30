@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import "tailwindcss";
+
+/* Preserve typography */
+* {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+}
+
+/* Custom dark variant declaration for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Theme variable overrides */
+@theme {
+  --color-primary: #5044E5;
+  --color-primary-hover: #4338CA;
+}
+
+/* Global Ambient Mesh & Smooth Behavior */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Light Mode Mesh */
+    background-color: #ffffff;
+    background-image: 
+      radial-gradient(at 10% 10%, rgba(80, 68, 229, 0.08) 0px, transparent 50%),
+      radial-gradient(at 90% 80%, rgba(236, 72, 153, 0.06) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(99, 102, 241, 0.04) 0px, transparent 60%);
+    background-attachment: fixed;
+    transition: background-color 0.5s ease;
+  }
+
+  /* Dark Mode Mesh */
+  .dark body {
+    background-color: #030712;
+    background-image: 
+      radial-gradient(at 15% 15%, rgba(80, 68, 229, 0.18) 0px, transparent 50%),
+      radial-gradient(at 85% 75%, rgba(168, 85, 247, 0.12) 0px, transparent 50%),
+      radial-gradient(at 50% 30%, rgba(59, 130, 246, 0.10) 0px, transparent 60%);
+    background-attachment: fixed;
+  }
+}
+
+/* Scrollbar Utility */
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
