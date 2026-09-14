@@ -8,7 +8,7 @@ import OurWork from './components/OurWork'
 import Teams from './components/Teams'
 import ContactUs from './components/ContactUs'
 import Footer from './components/Footer'
-
+//hii i am satya
 // Smooth custom cubic-bezier curve for fluid motion
 const smoothEase = [0.25, 1, 0.5, 1]
 
